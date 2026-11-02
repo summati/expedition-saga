@@ -149,7 +149,935 @@
     }
     </script>
     
-    <link rel="stylesheet" href="/assets/tajmahal-heritage.css">
+    <style>
+/* ==========================================================================
+   TAJMAHAL.CITY • IMPERIAL MUGHAL HERITAGE DESIGN SYSTEM
+   Inspired by Makrana White Marble, Pietra Dura (Parchin Kari),
+   Amanat Khan Thuluth Calligraphy, and Imperial Mughal Arches
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Amiri:ital,wght@0,400;0,700;1,400&display=swap');
+
+:root {
+  /* Alabaster & Makrana White Marble Palette */
+  --marble-pure: #ffffff;
+  --marble-luminous: #faf7f2;
+  --marble-grain: #f2ece1;
+  --marble-border: #e3d7c4;
+  --marble-shadow: rgba(20, 40, 80, 0.08);
+
+  /* Pietra Dura (Parchinkari) Gemstone Inlay Accents */
+  --lapis-royal: #0f1d38;        /* Lapis Lazuli - Imperial Deep Blue */
+  --lapis-midnight: #091224;     /* Cenotaph Night Blue */
+  --lapis-light: #1e3a6d;
+  --mughal-gold: #c59b27;        /* Inlaid Gold & Brass Finial */
+  --mughal-gold-glow: #e8c868;
+  --mughal-gold-dark: #967417;
+  --jasper-red: #8f1d1d;         /* Red Jasper / Carnelian Petal */
+  --jasper-hover: #b91c1c;
+  --malachite-green: #1b4332;    /* Malachite Leaf Inlay */
+  --sandstone-agra: #a33b24;      /* Lal Qila / Fatehpur Sikri Red Sandstone */
+
+  /* Typography */
+  --font-serif: 'Cinzel', serif;
+  --font-sans: 'Plus Jakarta Sans', sans-serif;
+  --font-calligraphy: 'Amiri', serif;
+}
+
+/* Reset & Base Setup */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--marble-luminous);
+  color: var(--lapis-royal);
+  font-family: var(--font-sans);
+  line-height: 1.6;
+  font-size: 16px;
+  background-image: 
+    radial-gradient(circle at 10% 20%, rgba(197, 155, 39, 0.04) 0%, transparent 40%),
+    radial-gradient(circle at 90% 80%, rgba(15, 29, 56, 0.03) 0%, transparent 40%),
+    url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 0l30 30-30 30L0 30z' fill='%23c59b27' fill-opacity='0.015' fill-rule='evenodd'/%3E%3C/svg%3E");
+}
+
+/* Container */
+.container {
+  width: min(1200px, 100% - 32px);
+  margin-inline: auto;
+}
+
+/* ==========================================================================
+   MUGHAL ARCH ARCHITECTURE (Mehrab & Pishtaq Curves)
+   ========================================================================== */
+
+/* The Iconic Pointed Ogee Arch Cutout */
+.mughal-arch {
+  position: relative;
+  border-top-left-radius: 50% 30%;
+  border-top-right-radius: 50% 30%;
+  overflow: hidden;
+  box-shadow: 0 16px 36px var(--marble-shadow);
+  border: 1px solid var(--marble-border);
+  background: var(--marble-pure);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.mughal-arch:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 24px 50px rgba(15, 29, 56, 0.14);
+}
+
+/* Cusped Arch Header Crown */
+.arch-crown {
+  width: 100%;
+  height: 24px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 20' preserveAspectRatio='none'%3E%3Cpath d='M0,20 C30,20 40,5 60,0 C80,5 90,20 120,20 Z' fill='%23c59b27' fill-opacity='0.25'/%3E%3C/svg%3E");
+  background-size: contain;
+  background-repeat: repeat-x;
+}
+
+/* Calligraphy Watermark Motif */
+.calligraphy-motif {
+  font-family: var(--font-calligraphy);
+  color: rgba(197, 155, 39, 0.12);
+  user-select: none;
+  pointer-events: none;
+  position: absolute;
+  direction: rtl;
+  font-size: clamp(3rem, 8vw, 6.5rem);
+  white-space: nowrap;
+  line-height: 1;
+  font-weight: 700;
+  z-index: 0;
+}
+
+/* Parchinkari Floral Ribbon */
+.parchinkari-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  margin: 32px auto;
+  width: 100%;
+  max-width: 480px;
+}
+
+.parchinkari-divider::before,
+.parchinkari-divider::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--mughal-gold), transparent);
+}
+
+.parchinkari-gem {
+  width: 14px;
+  height: 14px;
+  background: var(--mughal-gold);
+  transform: rotate(45deg);
+  border: 2px solid var(--marble-pure);
+  box-shadow: 0 0 10px rgba(197, 155, 39, 0.5);
+}
+
+/* ==========================================================================
+   NAVIGATION BAR
+   ========================================================================== */
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(250, 247, 242, 0.94);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--marble-border);
+  box-shadow: 0 4px 20px rgba(15, 29, 56, 0.04);
+}
+
+.nav-shell {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 80px;
+}
+
+.brand-royal {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  text-decoration: none;
+  color: var(--lapis-royal);
+}
+
+.brand-arch-badge {
+  width: 44px;
+  height: 48px;
+  background: linear-gradient(135deg, var(--lapis-royal), var(--lapis-midnight));
+  border: 1px solid var(--mughal-gold);
+  border-top-left-radius: 22px;
+  border-top-right-radius: 22px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: var(--mughal-gold-glow);
+  font-family: var(--font-serif);
+  font-weight: 800;
+  font-size: 16px;
+  box-shadow: 0 4px 12px rgba(15, 29, 56, 0.2);
+}
+
+.brand-text strong {
+  font-family: var(--font-serif);
+  font-size: 22px;
+  letter-spacing: 0.5px;
+  color: var(--lapis-royal);
+  display: block;
+  line-height: 1.1;
+}
+
+.brand-text small {
+  font-size: 9.5px;
+  letter-spacing: 2px;
+  color: var(--mughal-gold-dark);
+  font-weight: 700;
+  text-transform: uppercase;
+  display: block;
+  margin-top: 3px;
+}
+
+.main-nav {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+
+.main-nav a:not(.btn-booking) {
+  text-decoration: none;
+  color: var(--lapis-royal);
+  font-size: 14.5px;
+  font-weight: 600;
+  letter-spacing: 0.2px;
+  transition: color 0.2s ease;
+  position: relative;
+}
+
+.main-nav a:not(.btn-booking):hover {
+  color: var(--mughal-gold-dark);
+}
+
+.main-nav a:not(.btn-booking)::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--mughal-gold);
+  transition: width 0.2s ease;
+}
+
+.main-nav a:not(.btn-booking):hover::after {
+  width: 100%;
+}
+
+/* Royal WhatsApp & Booking Buttons */
+.btn-booking {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: linear-gradient(135deg, var(--jasper-red), #771212);
+  color: #ffffff !important;
+  text-decoration: none;
+  padding: 13px 22px;
+  border-radius: 6px;
+  font-size: 14.5px;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+  border: 1px solid rgba(197, 155, 39, 0.4);
+  box-shadow: 0 8px 20px rgba(143, 29, 29, 0.25);
+  transition: all 0.25s ease;
+}
+
+.btn-booking:hover {
+  background: linear-gradient(135deg, var(--jasper-hover), var(--jasper-red));
+  transform: translateY(-2px);
+  box-shadow: 0 12px 26px rgba(143, 29, 29, 0.35);
+}
+
+.btn-gold {
+  background: linear-gradient(135deg, var(--mughal-gold), var(--mughal-gold-dark));
+  color: var(--lapis-midnight) !important;
+  box-shadow: 0 8px 20px rgba(197, 155, 39, 0.3);
+}
+
+.btn-gold:hover {
+  background: linear-gradient(135deg, var(--mughal-gold-glow), var(--mughal-gold));
+  color: #000000 !important;
+}
+
+/* ==========================================================================
+   HERO SECTION • IMPERIAL CITY OF THE TAJ MAHAL
+   ========================================================================== */
+
+.hero-imperial {
+  position: relative;
+  background: var(--lapis-midnight);
+  color: var(--marble-luminous);
+  min-height: 720px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+.hero-backdrop {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+
+.hero-backdrop img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.42;
+  filter: contrast(1.1) brightness(0.9);
+}
+
+.hero-backdrop::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(9, 18, 36, 0.5) 0%, rgba(9, 18, 36, 0.85) 75%, var(--lapis-midnight) 100%),
+              linear-gradient(90deg, rgba(9, 18, 36, 0.95) 0%, rgba(9, 18, 36, 0.6) 50%, rgba(9, 18, 36, 0.2) 100%);
+}
+
+.hero-calligraphy-bg {
+  position: absolute;
+  top: 15%;
+  right: -5%;
+  font-family: var(--font-calligraphy);
+  font-size: clamp(4rem, 12vw, 11rem);
+  color: rgba(232, 200, 104, 0.08);
+  white-space: nowrap;
+  pointer-events: none;
+  z-index: 2;
+  direction: rtl;
+  user-select: none;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 3;
+  padding: 100px 0 110px;
+  max-width: 780px;
+}
+
+.hero-kicker-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  background: rgba(197, 155, 39, 0.15);
+  border: 1px solid var(--mughal-gold);
+  color: var(--mughal-gold-glow);
+  padding: 6px 14px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  margin-bottom: 24px;
+}
+
+.hero-title {
+  font-family: var(--font-serif);
+  font-size: clamp(2.8rem, 6.5vw, 5.2rem);
+  font-weight: 800;
+  line-height: 1.08;
+  letter-spacing: -0.5px;
+  margin-bottom: 24px;
+  color: #ffffff;
+}
+
+.hero-title em {
+  font-style: normal;
+  background: linear-gradient(135deg, #ffffff 0%, var(--mughal-gold-glow) 60%, var(--mughal-gold) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero-summary {
+  font-size: 20px;
+  line-height: 1.5;
+  color: rgba(250, 247, 242, 0.88);
+  margin-bottom: 36px;
+  max-width: 650px;
+}
+
+.hero-actions-row {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 18px;
+  margin-bottom: 45px;
+}
+
+.hero-badges-strip {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 24px;
+  font-size: 14px;
+  color: rgba(250, 247, 242, 0.75);
+}
+
+.hero-badges-strip span {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.hero-badges-strip svg {
+  color: var(--mughal-gold-glow);
+}
+
+/* ==========================================================================
+   IMPERIAL CITY DESTINATIONS • BEYOND JUST THE TAJ MAHAL
+   ========================================================================== */
+
+.section-head {
+  text-align: center;
+  max-width: 760px;
+  margin: 0 auto 50px;
+}
+
+.section-eyebrow {
+  font-size: 12px;
+  letter-spacing: 2px;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: var(--mughal-gold-dark);
+  margin-bottom: 12px;
+}
+
+.section-headline {
+  font-family: var(--font-serif);
+  font-size: clamp(2.2rem, 4vw, 3.4rem);
+  font-weight: 800;
+  color: var(--lapis-royal);
+  line-height: 1.15;
+  margin-bottom: 16px;
+}
+
+.section-subtext {
+  font-size: 18px;
+  color: #55627a;
+  line-height: 1.6;
+}
+
+/* 5 Imperial Monuments Grid */
+.monuments-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  margin-bottom: 80px;
+}
+
+.monument-card {
+  background: var(--marble-pure);
+  border: 1px solid var(--marble-border);
+  border-top-left-radius: 40px;
+  border-top-right-radius: 40px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px var(--marble-shadow);
+  transition: transform 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.monument-card:hover {
+  transform: translateY(-6px);
+}
+
+.monument-img {
+  height: 170px;
+  position: relative;
+  overflow: hidden;
+}
+
+.monument-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.monument-tag {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  background: rgba(15, 29, 56, 0.85);
+  color: var(--mughal-gold-glow);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+
+.monument-body {
+  padding: 18px 16px 20px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.monument-body h3 {
+  font-family: var(--font-serif);
+  font-size: 18px;
+  margin-bottom: 6px;
+  color: var(--lapis-royal);
+}
+
+.monument-body p {
+  font-size: 13.5px;
+  color: #64748b;
+  line-height: 1.45;
+  margin-bottom: 12px;
+  flex: 1;
+}
+
+.monument-link {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--jasper-red);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+/* ==========================================================================
+   FEATURED LUXURY TOURS • MUGHAL ARCH ARCHITECTURE
+   ========================================================================== */
+
+.tours-section {
+  padding: 80px 0 100px;
+  background: linear-gradient(180deg, transparent 0%, rgba(227, 215, 196, 0.25) 100%);
+}
+
+.tours-arch-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+  gap: 26px;
+  margin-top: 40px;
+}
+
+.tour-arch-card {
+  background: var(--marble-pure);
+  border: 1px solid var(--marble-border);
+  border-top-left-radius: 90px;
+  border-top-right-radius: 90px;
+  overflow: hidden;
+  box-shadow: 0 16px 36px var(--marble-shadow);
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.tour-arch-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 28px 60px rgba(15, 29, 56, 0.16);
+  border-color: var(--mughal-gold);
+}
+
+.tour-arch-media {
+  height: 230px;
+  position: relative;
+  overflow: hidden;
+  border-top-left-radius: 90px;
+  border-top-right-radius: 90px;
+}
+
+.tour-arch-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.tour-arch-card:hover .tour-arch-media img {
+  transform: scale(1.08);
+}
+
+.tour-badge-top {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--lapis-midnight);
+  border: 1px solid var(--mughal-gold);
+  color: var(--mughal-gold-glow);
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  padding: 6px 14px;
+  border-radius: 999px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+  white-space: nowrap;
+}
+
+.tour-arch-body {
+  padding: 24px 22px 26px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.tour-arch-body h3 {
+  font-family: var(--font-serif);
+  font-size: 23px;
+  color: var(--lapis-royal);
+  margin-bottom: 10px;
+  line-height: 1.25;
+}
+
+.tour-arch-body p {
+  color: #55627a;
+  font-size: 14.5px;
+  line-height: 1.55;
+  margin-bottom: 20px;
+  flex: 1;
+}
+
+.tour-perks-list {
+  list-style: none;
+  margin-bottom: 20px;
+  padding-top: 14px;
+  border-top: 1px dashed var(--marble-border);
+}
+
+.tour-perks-list li {
+  font-size: 13px;
+  color: var(--lapis-royal);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 6px;
+  font-weight: 600;
+}
+
+.tour-perks-list svg {
+  color: var(--mughal-gold);
+  flex-shrink: 0;
+}
+
+.tour-arch-footer {
+  border-top: 1px solid var(--marble-border);
+  padding-top: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.tour-price-block small {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #718096;
+  display: block;
+}
+
+.tour-price-block strong {
+  font-size: 20px;
+  font-family: var(--font-serif);
+  color: var(--lapis-royal);
+}
+
+/* ==========================================================================
+   PARCHINKARI (PIETRA DURA) CRAFT & HERITAGE SPOTLIGHT
+   ========================================================================== */
+
+.parchinkari-showcase {
+  background: var(--lapis-midnight);
+  color: var(--marble-luminous);
+  padding: 100px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.parchinkari-showcase .calligraphy-motif {
+  color: rgba(232, 200, 104, 0.05);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: clamp(6rem, 16vw, 16rem);
+}
+
+.showcase-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 60px;
+  position: relative;
+  z-index: 2;
+}
+
+.showcase-media {
+  position: relative;
+}
+
+.showcase-frame {
+  border-top-left-radius: 120px;
+  border-top-right-radius: 120px;
+  overflow: hidden;
+  border: 2px solid var(--mughal-gold);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+}
+
+.showcase-frame img {
+  width: 100%;
+  height: 480px;
+  object-fit: cover;
+  display: block;
+}
+
+.showcase-copy h2 {
+  font-family: var(--font-serif);
+  font-size: clamp(2.2rem, 4vw, 3.4rem);
+  line-height: 1.15;
+  margin-bottom: 20px;
+  color: #ffffff;
+}
+
+.showcase-copy p {
+  color: rgba(250, 247, 242, 0.85);
+  font-size: 17px;
+  line-height: 1.7;
+  margin-bottom: 24px;
+}
+
+.heritage-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-top: 36px;
+  border-top: 1px solid rgba(197, 155, 39, 0.3);
+  padding-top: 28px;
+}
+
+.stat-box strong {
+  font-family: var(--font-serif);
+  font-size: 32px;
+  color: var(--mughal-gold-glow);
+  display: block;
+  line-height: 1;
+  margin-bottom: 6px;
+}
+
+.stat-box span {
+  font-size: 13px;
+  color: rgba(250, 247, 242, 0.7);
+  line-height: 1.3;
+  display: block;
+}
+
+/* ==========================================================================
+   AGRA CITY CULTURE & GASTRONOMY
+   ========================================================================== */
+
+.city-experience-section {
+  padding: 90px 0;
+}
+
+.experience-strip {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-top: 40px;
+}
+
+.exp-card {
+  background: var(--marble-pure);
+  border: 1px solid var(--marble-border);
+  padding: 32px 26px;
+  border-radius: 8px;
+  position: relative;
+  box-shadow: 0 8px 24px var(--marble-shadow);
+  border-top: 3px solid var(--mughal-gold);
+}
+
+.exp-card h3 {
+  font-family: var(--font-serif);
+  font-size: 21px;
+  color: var(--lapis-royal);
+  margin-bottom: 12px;
+}
+
+.exp-card p {
+  color: #55627a;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+/* ==========================================================================
+   FAQ ACCORDION • RICH SNIPPET OPTIMIZED
+   ========================================================================== */
+
+.faq-wrap {
+  max-width: 850px;
+  margin: 40px auto 0;
+}
+
+.faq-item {
+  background: var(--marble-pure);
+  border: 1px solid var(--marble-border);
+  border-radius: 8px;
+  margin-bottom: 14px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px var(--marble-shadow);
+}
+
+.faq-item summary {
+  padding: 20px 24px;
+  font-family: var(--font-serif);
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--lapis-royal);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  list-style: none;
+}
+
+.faq-item summary::-webkit-details-marker {
+  display: none;
+}
+
+.faq-item summary span {
+  font-family: var(--font-sans);
+  color: var(--mughal-gold);
+  font-size: 24px;
+  font-weight: 400;
+}
+
+.faq-content {
+  padding: 0 24px 22px;
+  color: #4a5568;
+  font-size: 15.5px;
+  line-height: 1.7;
+}
+
+/* ==========================================================================
+   FOOTER • IMPERIAL AGRA GATEWAY
+   ========================================================================== */
+
+.imperial-footer {
+  background: var(--lapis-midnight);
+  color: var(--marble-luminous);
+  padding: 80px 0 30px;
+  border-top: 2px solid var(--mughal-gold);
+  position: relative;
+}
+
+.footer-top-grid {
+  display: grid;
+  grid-template-columns: 1.6fr 1fr 1fr 1.2fr;
+  gap: 40px;
+  padding-bottom: 50px;
+  border-bottom: 1px solid rgba(197, 155, 39, 0.2);
+}
+
+.footer-top-grid h4 {
+  font-family: var(--font-serif);
+  font-size: 16px;
+  letter-spacing: 1px;
+  color: var(--mughal-gold-glow);
+  text-transform: uppercase;
+  margin-bottom: 18px;
+}
+
+.footer-links-list {
+  list-style: none;
+}
+
+.footer-links-list li {
+  margin-bottom: 10px;
+}
+
+.footer-links-list a {
+  color: rgba(250, 247, 242, 0.75);
+  text-decoration: none;
+  font-size: 14.5px;
+  transition: color 0.2s;
+}
+
+.footer-links-list a:hover {
+  color: var(--mughal-gold-glow);
+}
+
+.footer-bottom-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 26px;
+  font-size: 13px;
+  color: rgba(250, 247, 242, 0.55);
+}
+
+/* Mobile Sticky WhatsApp Button */
+.mobile-sticky-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(9, 18, 36, 0.95);
+  backdrop-filter: blur(12px);
+  padding: 12px 16px;
+  z-index: 999;
+  border-top: 1px solid var(--mughal-gold);
+  display: none;
+}
+
+.mobile-sticky-bar a {
+  width: 100%;
+  justify-content: center;
+}
+
+@media (max-width: 860px) {
+  .mobile-sticky-bar {
+    display: block;
+  }
+  body {
+    padding-bottom: 65px;
+  }
+  .showcase-grid,
+  .footer-top-grid,
+  .experience-strip {
+    grid-template-columns: 1fr;
+  }
+  .main-nav {
+    display: none;
+  }
+  .hero-imperial {
+    min-height: auto;
+  }
+  .hero-content {
+    padding: 60px 0 80px;
+  }
+}
+
+</style>
   </head>
   <body>
     <!-- Site Navigation Header -->
@@ -182,7 +1110,7 @@
       <!-- Hero Section: The Imperial City of the Taj Mahal -->
       <section class="hero-imperial">
         <div class="hero-backdrop">
-          <img src="/images/taj-mahal-sunrise.webp" alt="Sunrise reflecting across the marble pool of the Taj Mahal in Agra" fetchpriority="high">
+          <img src="./images/taj-mahal-sunrise.webp" alt="Sunrise reflecting across the marble pool of the Taj Mahal in Agra" fetchpriority="high">
         </div>
 
         <!-- Historic Thuluth Calligraphy Watermark (Surah Al-Fajr - Darwaza-i-Rauza) -->
@@ -247,7 +1175,7 @@
           <article class="monument-card">
             <div class="monument-img">
               <span class="monument-tag">WORLD WONDER</span>
-              <img src="/images/taj-mahal-sunrise.webp" alt="The Taj Mahal in Agra" loading="lazy">
+              <img src="./images/taj-mahal-sunrise.webp" alt="The Taj Mahal in Agra" loading="lazy">
             </div>
             <div class="monument-body">
               <h3>The Taj Mahal</h3>
@@ -260,7 +1188,7 @@
           <article class="monument-card">
             <div class="monument-img">
               <span class="monument-tag">IMPERIAL CITADEL</span>
-              <img src="/images/agra-heritage-tour.webp" alt="Agra Fort Lal Qila" loading="lazy">
+              <img src="./images/agra-heritage-tour.webp" alt="Agra Fort Lal Qila" loading="lazy">
             </div>
             <div class="monument-body">
               <h3>Agra Fort (Lal Qila)</h3>
@@ -273,7 +1201,7 @@
           <article class="monument-card">
             <div class="monument-img">
               <span class="monument-tag">CITY OF VICTORY</span>
-              <img src="/images/agra-marble-detail.webp" alt="Fatehpur Sikri Buland Darwaza" loading="lazy">
+              <img src="./images/agra-marble-detail.webp" alt="Fatehpur Sikri Buland Darwaza" loading="lazy">
             </div>
             <div class="monument-body">
               <h3>Fatehpur Sikri</h3>
@@ -286,7 +1214,7 @@
           <article class="monument-card">
             <div class="monument-img">
               <span class="monument-tag">THE INSPIRATION</span>
-              <img src="/images/agra-marble-detail.webp" alt="Baby Taj Itimad-ud-Daulah" loading="lazy">
+              <img src="./images/agra-marble-detail.webp" alt="Baby Taj Itimad-ud-Daulah" loading="lazy">
             </div>
             <div class="monument-body">
               <h3>Itimad-ud-Daulah</h3>
@@ -299,7 +1227,7 @@
           <article class="monument-card">
             <div class="monument-img">
               <span class="monument-tag">SUNSET REFLECTION</span>
-              <img src="/images/taj-mahal-sunrise.webp" alt="Mehtab Bagh Moonlight Garden" loading="lazy">
+              <img src="./images/taj-mahal-sunrise.webp" alt="Mehtab Bagh Moonlight Garden" loading="lazy">
             </div>
             <div class="monument-body">
               <h3>Mehtab Bagh</h3>
@@ -324,7 +1252,7 @@
             <article class="tour-arch-card mughal-arch">
               <div class="tour-arch-media">
                 <span class="tour-badge-top">MOST REQUESTED</span>
-                <img src="/images/taj-mahal-sunrise.webp" alt="Sunrise Taj Mahal private tour in Agra" loading="lazy">
+                <img src="./images/taj-mahal-sunrise.webp" alt="Sunrise Taj Mahal private tour in Agra" loading="lazy">
               </div>
               <div class="tour-arch-body">
                 <h3>Sunrise Taj Mahal Dawn Tour</h3>
@@ -359,7 +1287,7 @@
             <article class="tour-arch-card mughal-arch">
               <div class="tour-arch-media">
                 <span class="tour-badge-top">DELHI &bull; NOIDA &bull; GURGAON</span>
-                <img src="/images/agra-heritage-tour.webp" alt="Same day Delhi to Agra tour by private car" loading="lazy">
+                <img src="./images/agra-heritage-tour.webp" alt="Same day Delhi to Agra tour by private car" loading="lazy">
               </div>
               <div class="tour-arch-body">
                 <h3>Delhi to Agra Same-Day Trip</h3>
@@ -394,7 +1322,7 @@
             <article class="tour-arch-card mughal-arch">
               <div class="tour-arch-media">
                 <span class="tour-badge-top">FULL CITY IMMERSION</span>
-                <img src="/images/agra-marble-detail.webp" alt="Full day Agra city tour with Fatehpur Sikri" loading="lazy">
+                <img src="./images/agra-marble-detail.webp" alt="Full day Agra city tour with Fatehpur Sikri" loading="lazy">
               </div>
               <div class="tour-arch-body">
                 <h3>Grand Agra City &amp; Fatehpur Sikri</h3>
@@ -429,7 +1357,7 @@
             <article class="tour-arch-card mughal-arch">
               <div class="tour-arch-media">
                 <span class="tour-badge-top">CERTIFIED HISTORIAN</span>
-                <img src="/images/taj-mahal-sunrise.webp" alt="Govt approved private tour guide Agra" loading="lazy">
+                <img src="./images/taj-mahal-sunrise.webp" alt="Govt approved private tour guide Agra" loading="lazy">
               </div>
               <div class="tour-arch-body">
                 <h3>Private Govt-Approved Tour Guide</h3>
@@ -472,7 +1400,7 @@
         <div class="container showcase-grid">
           <div class="showcase-media">
             <div class="showcase-frame">
-              <img src="/images/agra-marble-detail.webp" alt="Parchin Kari Pietra Dura marble stone inlay in Agra" loading="lazy">
+              <img src="./images/agra-marble-detail.webp" alt="Parchin Kari Pietra Dura marble stone inlay in Agra" loading="lazy">
             </div>
           </div>
 
