@@ -87,18 +87,16 @@
     }
     </script>
 
-    <!-- Luxury Typography: Cormorant Garamond (Imperial Headings) + Plus Jakarta Sans (Clean Modern UI) -->
+    <!-- Luxury Typography: Playfair Display (Crisp, High-Fashion Editorial) + Plus Jakarta Sans (Modern Clean UI) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600;1,700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
 
     <style>
       /* ==========================================================================
-         LUMINOUS MAKRANA WHITE MARBLE DESIGN SYSTEM
-         Pure Alabaster, Inlaid Gold & Genuine Pietra Dura Colors
+         LUMINOUS MAKRANA WHITE MARBLE LUXURY PALETTE
          ========================================================================== */
       :root {
-        /* Luminous White Marble & Stone Tones */
         --marble-pure: #ffffff;
         --marble-soft: #fcfbfa;
         --marble-ivory: #faf7f2;
@@ -106,16 +104,15 @@
         --marble-border: #e6dfd1;
         --gold-burnished: #b8860b;
         --gold-light: #d4af37;
-        --gold-subtle: rgba(184, 134, 11, 0.15);
+        --gold-subtle: rgba(184, 134, 11, 0.12);
         --slate-imperial: #182420;
-        --forest-royal: #22382e;
+        --forest-royal: #1b382b;
         --text-slate: #24332d;
-        --text-muted: #607069;
+        --text-muted: #5e6d67;
         --shadow-soft: 0 12px 36px rgba(36, 51, 45, 0.06);
 
-        /* Fonts */
-        --font-display: 'Cormorant Garamond', Georgia, serif;
-        --font-body: 'Plus Jakarta Sans', -apple-system, sans-serif;
+        --font-serif: 'Playfair Display', Georgia, serif;
+        --font-sans: 'Plus Jakarta Sans', -apple-system, sans-serif;
         --font-arabic: 'Amiri', serif;
       }
 
@@ -124,14 +121,11 @@
       body {
         background-color: var(--marble-ivory);
         color: var(--text-slate);
-        font-family: var(--font-body);
+        font-family: var(--font-sans);
         font-size: 16px;
         line-height: 1.65;
         overflow-x: hidden;
         -webkit-font-smoothing: antialiased;
-        background-image: 
-          radial-gradient(circle at 15% 15%, rgba(184, 134, 11, 0.03) 0%, transparent 40%),
-          radial-gradient(circle at 85% 85%, rgba(34, 56, 46, 0.03) 0%, transparent 40%);
       }
 
       .container {
@@ -139,9 +133,7 @@
         margin-inline: auto;
       }
 
-      /* ==========================================================================
-         LIVE AGRA MONUMENT RADAR TICKER (WHITE MARBLE CROWN)
-         ========================================================================== */
+      /* Live Radar Ticker */
       .radar-bar {
         background: var(--marble-pure);
         color: var(--text-slate);
@@ -176,13 +168,13 @@
       }
 
       /* ==========================================================================
-         SITE NAVIGATION HEADER
+         SITE HEADER WITH MUGHAL ARCH SVG LOGO
          ========================================================================== */
       .site-header {
         position: sticky;
         top: 0;
         z-index: 99;
-        background: rgba(255, 255, 255, 0.94);
+        background: rgba(255, 255, 255, 0.96);
         backdrop-filter: blur(20px);
         -webkit-backdrop-filter: blur(20px);
         border-bottom: 1px solid var(--marble-border);
@@ -192,46 +184,39 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
-        min-height: 80px;
+        min-height: 82px;
       }
       .brand-box {
         display: flex;
         align-items: center;
-        gap: 14px;
+        gap: 15px;
         text-decoration: none;
       }
-      .brand-arch-seal {
-        width: 44px;
+      .brand-logo-arch {
+        width: 46px;
         height: 48px;
-        background: var(--forest-royal);
-        border: 1.5px solid var(--gold-burnished);
-        border-top-left-radius: 22px;
-        border-top-right-radius: 22px;
         display: flex;
         align-items: center;
         justify-content: center;
-        color: #ffffff;
-        font-family: var(--font-display);
-        font-size: 20px;
-        font-weight: 700;
-        box-shadow: 0 4px 12px rgba(34, 56, 46, 0.15);
+        flex-shrink: 0;
       }
-      .brand-name-wrap strong {
-        font-family: var(--font-display);
+      .brand-name-wrap .brand-title {
+        font-family: var(--font-serif);
         font-size: 24px;
-        letter-spacing: 0.5px;
+        font-weight: 700;
+        letter-spacing: -0.3px;
         color: var(--slate-imperial);
         display: block;
         line-height: 1.1;
       }
-      .brand-name-wrap small {
+      .brand-name-wrap .brand-tagline {
         font-size: 9.5px;
         font-weight: 700;
         letter-spacing: 2px;
         text-transform: uppercase;
         color: var(--gold-burnished);
         display: block;
-        margin-top: 2px;
+        margin-top: 3px;
       }
       .nav-links {
         display: flex;
@@ -243,9 +228,8 @@
         color: var(--text-slate);
         font-size: 14.5px;
         font-weight: 600;
-        letter-spacing: 0.3px;
+        letter-spacing: 0.2px;
         transition: color 0.2s;
-        position: relative;
       }
       .nav-links a:not(.btn-royal):hover {
         color: var(--gold-burnished);
@@ -264,15 +248,15 @@
         padding: 12px 22px;
         font-size: 14px;
         font-weight: 700;
-        letter-spacing: 0.5px;
-        box-shadow: 0 6px 18px rgba(34, 56, 46, 0.15);
+        letter-spacing: 0.3px;
+        box-shadow: 0 6px 18px rgba(27, 56, 43, 0.18);
         transition: all 0.25s ease;
       }
       .btn-royal:hover {
         background: var(--gold-burnished);
         color: #ffffff !important;
         transform: translateY(-2px);
-        box-shadow: 0 10px 24px rgba(184, 134, 11, 0.25);
+        box-shadow: 0 10px 24px rgba(184, 134, 11, 0.28);
       }
 
       /* ==========================================================================
@@ -296,18 +280,18 @@
         width: 100%;
         height: 100%;
         object-fit: cover;
-        opacity: 0.75;
+        opacity: 0.72;
       }
       .hero-bg-frame::after {
         content: '';
         position: absolute;
         inset: 0;
         background: 
-          linear-gradient(90deg, rgba(250, 247, 242, 0.96) 0%, rgba(250, 247, 242, 0.88) 45%, rgba(250, 247, 242, 0.35) 100%),
+          linear-gradient(90deg, rgba(250, 247, 242, 0.96) 0%, rgba(250, 247, 242, 0.88) 46%, rgba(250, 247, 242, 0.3) 100%),
           linear-gradient(180deg, rgba(250, 247, 242, 0.3) 0%, rgba(250, 247, 242, 0.95) 100%);
       }
 
-      /* Subtle Calligraphy Watermark */
+      /* Calligraphy Watermark */
       .hero-calligraphy-watermark {
         position: absolute;
         bottom: 30px;
@@ -326,16 +310,16 @@
         position: relative;
         z-index: 3;
         padding: 85px 0 95px;
-        max-width: 700px;
+        max-width: 680px;
       }
       .hero-tag {
         display: inline-flex;
         align-items: center;
         gap: 8px;
         color: var(--gold-burnished);
-        font-size: 12px;
-        font-weight: 700;
-        letter-spacing: 2px;
+        font-size: 11.5px;
+        font-weight: 800;
+        letter-spacing: 2.2px;
         text-transform: uppercase;
         margin-bottom: 20px;
       }
@@ -343,14 +327,14 @@
         content: '';
         display: inline-block;
         width: 24px;
-        height: 1.5px;
+        height: 2px;
         background: var(--gold-burnished);
       }
       .hero-headline {
-        font-family: var(--font-display);
-        font-size: clamp(3.2rem, 6.5vw, 5.4rem);
-        font-weight: 600;
-        line-height: 1.05;
+        font-family: var(--font-serif);
+        font-size: clamp(3rem, 6vw, 5.2rem);
+        font-weight: 700;
+        line-height: 1.08;
         letter-spacing: -0.5px;
         margin-bottom: 22px;
         color: var(--slate-imperial);
@@ -358,7 +342,6 @@
       .hero-headline em {
         font-style: italic;
         color: var(--gold-burnished);
-        font-weight: 400;
       }
       .hero-description {
         font-size: 19px;
@@ -378,7 +361,7 @@
         align-items: center;
         gap: 8px;
         color: var(--forest-royal);
-        background: rgba(255, 255, 255, 0.8);
+        background: rgba(255, 255, 255, 0.85);
         text-decoration: none;
         font-size: 14.5px;
         font-weight: 600;
@@ -409,9 +392,7 @@
         gap: 6px;
       }
 
-      /* ==========================================================================
-         INLAID WHITE MARBLE CALLIGRAPHY FRIEZE
-         ========================================================================== */
+      /* Calligraphy Frieze */
       .calligraphy-frieze {
         background: var(--marble-pure);
         border-top: 1px solid var(--marble-border);
@@ -437,7 +418,7 @@
       }
 
       /* ==========================================================================
-         THE 5 MONUMENTS OF AGRA CITY
+         THE 5 MONUMENTS OF AGRA CITY (UNIQUE 4K PHOTOGRAPHY)
          ========================================================================== */
       .section-intro {
         text-align: center;
@@ -453,9 +434,9 @@
         margin-bottom: 10px;
       }
       .headline-grand {
-        font-family: var(--font-display);
+        font-family: var(--font-serif);
         font-size: clamp(2.4rem, 4.5vw, 3.8rem);
-        font-weight: 600;
+        font-weight: 700;
         line-height: 1.15;
         color: var(--slate-imperial);
         margin-bottom: 16px;
@@ -526,9 +507,9 @@
         flex: 1;
       }
       .fleet-body h3 {
-        font-family: var(--font-display);
-        font-size: 22px;
-        font-weight: 600;
+        font-family: var(--font-serif);
+        font-size: 21px;
+        font-weight: 700;
         color: var(--slate-imperial);
         margin-bottom: 6px;
       }
@@ -618,9 +599,9 @@
         flex: 1;
       }
       .tour-monument-body h3 {
-        font-family: var(--font-display);
-        font-size: 26px;
-        font-weight: 600;
+        font-family: var(--font-serif);
+        font-size: 24px;
+        font-weight: 700;
         color: var(--slate-imperial);
         margin-bottom: 8px;
         line-height: 1.2;
@@ -666,14 +647,14 @@
         display: block;
       }
       .tour-price-stack strong {
-        font-family: var(--font-display);
+        font-family: var(--font-serif);
         font-size: 22px;
         font-weight: 700;
         color: var(--slate-imperial);
       }
 
       /* ==========================================================================
-         INTERACTIVE 60-SECOND CUSTOM TOUR CALCULATOR
+         INTERACTIVE TOUR BUILDER CALCULATOR
          ========================================================================== */
       .calculator-section {
         padding: 90px 0;
@@ -729,7 +710,7 @@
         box-shadow: 0 8px 24px rgba(184, 134, 11, 0.08);
       }
       .calc-price-display {
-        font-family: var(--font-display);
+        font-family: var(--font-serif);
         font-size: 46px;
         font-weight: 700;
         color: var(--gold-burnished);
@@ -782,9 +763,9 @@
         object-fit: cover;
       }
       .atelier-copy h2 {
-        font-family: var(--font-display);
+        font-family: var(--font-serif);
         font-size: clamp(2.4rem, 4.5vw, 3.8rem);
-        font-weight: 600;
+        font-weight: 700;
         line-height: 1.15;
         margin-bottom: 20px;
         color: var(--slate-imperial);
@@ -844,9 +825,9 @@
         flex-shrink: 0;
       }
       .seal-copy h3 {
-        font-family: var(--font-display);
+        font-family: var(--font-serif);
         font-size: 26px;
-        font-weight: 600;
+        font-weight: 700;
         color: var(--slate-imperial);
         margin-bottom: 6px;
       }
@@ -872,9 +853,9 @@
       }
       .faq-card summary {
         padding: 20px 24px;
-        font-family: var(--font-display);
+        font-family: var(--font-serif);
         font-size: 21px;
-        font-weight: 600;
+        font-weight: 700;
         color: var(--slate-imperial);
         cursor: pointer;
         display: flex;
@@ -912,7 +893,7 @@
         border-bottom: 1px solid var(--marble-border);
       }
       .footer-cols h4 {
-        font-family: var(--font-display);
+        font-family: var(--font-serif);
         font-size: 18px;
         color: var(--gold-burnished);
         letter-spacing: 0.5px;
@@ -937,32 +918,428 @@
         color: var(--text-muted);
       }
 
-      /* Mobile Sticky WhatsApp Bar */
+      /* Mobile Header Controls & Actions */
+      .header-mobile-actions {
+        display: none;
+        align-items: center;
+        gap: 12px;
+      }
+      .header-call-btn {
+        width: 38px;
+        height: 38px;
+        background: var(--marble-ivory);
+        border: 1px solid var(--gold-burnished);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--forest-royal);
+        text-decoration: none;
+        transition: all 0.2s;
+      }
+      .header-call-btn:hover {
+        background: var(--forest-royal);
+        color: #ffffff;
+      }
+      .mobile-nav-toggle {
+        background: none;
+        border: 1px solid var(--marble-border);
+        width: 42px;
+        height: 42px;
+        border-radius: 8px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 5px;
+        cursor: pointer;
+        padding: 0;
+        transition: border-color 0.2s;
+      }
+      .mobile-nav-toggle:hover {
+        border-color: var(--gold-burnished);
+      }
+      .mobile-nav-toggle span {
+        display: block;
+        width: 22px;
+        height: 2px;
+        background: var(--slate-imperial);
+        border-radius: 2px;
+        transition: all 0.3s ease;
+      }
+
+      /* Mobile Navigation Drawer Overlay */
+      .mobile-nav-backdrop {
+        position: fixed;
+        inset: 0;
+        background: rgba(24, 36, 32, 0.6);
+        backdrop-filter: blur(4px);
+        z-index: 1000;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s ease;
+      }
+      .mobile-nav-backdrop.open {
+        opacity: 1;
+        visibility: visible;
+      }
+      .mobile-nav-drawer {
+        position: fixed;
+        top: 0;
+        right: -320px;
+        width: min(320px, 86vw);
+        height: 100%;
+        background: #ffffff;
+        box-shadow: -10px 0 30px rgba(0, 0, 0, 0.15);
+        z-index: 1001;
+        display: flex;
+        flex-direction: column;
+        transition: right 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+        overflow-y: auto;
+      }
+      .mobile-nav-drawer.open {
+        right: 0;
+      }
+      .drawer-header {
+        padding: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-bottom: 1px solid var(--marble-border);
+      }
+      .drawer-close-btn {
+        background: none;
+        border: none;
+        font-size: 30px;
+        line-height: 1;
+        color: var(--text-slate);
+        cursor: pointer;
+        padding: 4px;
+      }
+      .drawer-links {
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+        flex: 1;
+      }
+      .drawer-links a {
+        text-decoration: none;
+        color: var(--slate-imperial);
+        font-size: 15px;
+        font-weight: 600;
+        padding: 11px 12px;
+        border-radius: 6px;
+        transition: all 0.2s;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+      .drawer-links a:hover {
+        background: var(--marble-ivory);
+        color: var(--gold-burnished);
+        padding-left: 16px;
+      }
+      .drawer-footer {
+        padding: 20px;
+        border-top: 1px solid var(--marble-border);
+        background: var(--marble-soft);
+      }
+
+      /* Mobile Sticky Dual-Action Bar */
       .mobile-sticky-bar {
         position: fixed;
         bottom: 0;
         left: 0;
         right: 0;
-        background: rgba(255, 255, 255, 0.96);
-        backdrop-filter: blur(14px);
-        padding: 12px 16px;
+        background: rgba(255, 255, 255, 0.98);
+        backdrop-filter: blur(16px);
+        -webkit-backdrop-filter: blur(16px);
+        padding: 10px 14px calc(10px + env(safe-area-inset-bottom));
         z-index: 999;
         border-top: 1px solid var(--gold-burnished);
         display: none;
+        box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.08);
       }
-      .mobile-sticky-bar a {
-        width: 100%;
+      .sticky-bar-grid {
+        display: grid;
+        grid-template-columns: 1fr 1.35fr;
+        gap: 10px;
+        max-width: 500px;
+        margin: 0 auto;
+      }
+      .btn-mobile-call {
+        display: inline-flex;
+        align-items: center;
         justify-content: center;
+        gap: 7px;
+        background: #ffffff;
+        color: var(--forest-royal);
+        border: 1.5px solid var(--forest-royal);
+        border-radius: 6px;
+        padding: 11px 10px;
+        font-size: 13.5px;
+        font-weight: 700;
+        text-decoration: none;
+        white-space: nowrap;
+      }
+      .btn-mobile-wa {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 7px;
+        background: #1b382b;
+        color: #ffffff !important;
+        border: 1.5px solid var(--gold-burnished);
+        border-radius: 6px;
+        padding: 11px 12px;
+        font-size: 13.5px;
+        font-weight: 700;
+        text-decoration: none;
+        white-space: nowrap;
       }
 
-      @media (max-width: 860px) {
-        .mobile-sticky-bar { display: block; }
-        body { padding-bottom: 65px; }
+      /* ==========================================================================
+         COMPREHENSIVE RESPONSIVE MOBILE BREAKPOINTS
+         ========================================================================== */
+      @media (max-width: 900px) {
         .nav-links { display: none; }
+        .header-mobile-actions { display: flex; }
+        .site-header { min-height: 66px; }
+        .header-shell { min-height: 66px; }
+        .brand-logo-arch { width: 38px; height: 40px; }
+        .brand-name-wrap .brand-title { font-size: 21px; }
+        .brand-name-wrap .brand-tagline { font-size: 8.5px; letter-spacing: 1.5px; }
+
         .calculator-card, .atelier-grid, .seal-banner, .footer-cols {
           grid-template-columns: 1fr;
         }
-        .fleet-5-grid { grid-template-columns: 1fr 1fr; }
+      }
+
+      @media (max-width: 768px) {
+        body { padding-bottom: 74px; }
+        .mobile-sticky-bar { display: block; }
+        .container { width: min(100% - 30px, 1200px); }
+
+        /* Ticker */
+        .radar-bar { font-size: 11.5px; padding: 7px 0; }
+        .radar-inner { flex-direction: column; gap: 4px; text-align: center; justify-content: center; }
+
+        /* Hero */
+        .hero-sanctuary {
+          min-height: auto;
+          padding: 30px 0 45px;
+        }
+        .hero-bg-frame::after {
+          background: 
+            linear-gradient(180deg, rgba(250, 247, 242, 0.94) 0%, rgba(250, 247, 242, 0.96) 60%, rgba(250, 247, 242, 0.98) 100%);
+        }
+        .hero-content {
+          padding: 15px 0 20px;
+          max-width: 100%;
+        }
+        .hero-tag {
+          font-size: 10px;
+          letter-spacing: 1.6px;
+          margin-bottom: 12px;
+        }
+        .hero-tag::before { width: 16px; }
+        .hero-headline {
+          font-size: 2.35rem;
+          line-height: 1.15;
+          letter-spacing: -0.3px;
+          margin-bottom: 16px;
+        }
+        .hero-description {
+          font-size: 15px;
+          line-height: 1.55;
+          margin-bottom: 24px;
+        }
+        .hero-actions {
+          flex-direction: column;
+          width: 100%;
+          gap: 12px;
+          margin-bottom: 26px;
+        }
+        .hero-actions .btn-royal,
+        .hero-actions .btn-outline-gold {
+          width: 100%;
+          justify-content: center;
+          padding: 13px 18px;
+          font-size: 14.5px;
+        }
+        .hero-trust-badges {
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 8px;
+          font-size: 12.5px;
+          background: rgba(255, 255, 255, 0.7);
+          padding: 12px 14px;
+          border-radius: 8px;
+          border: 1px solid var(--marble-border);
+        }
+        .hero-calligraphy-watermark {
+          display: none; /* Hide heavy overlay on mobile to prevent clipping and text clutter */
+        }
+
+        /* Calligraphy Frieze */
+        .calligraphy-frieze { padding: 14px 0; }
+        .frieze-arabic {
+          font-size: 17px;
+          line-height: 1.4;
+          letter-spacing: 0.5px;
+        }
+        .frieze-english {
+          font-size: 10px;
+          letter-spacing: 1px;
+          line-height: 1.4;
+        }
+
+        /* The 5 Monuments Grid */
+        .headline-grand { font-size: 2.2rem; }
+        .lead-subtle { font-size: 15px; }
+        .section-intro { margin-bottom: 30px; }
+        .fleet-5-grid {
+          grid-template-columns: 1fr;
+          gap: 20px;
+          margin-bottom: 50px;
+        }
+        .fleet-card {
+          flex-direction: column;
+          align-items: stretch;
+          border-radius: 14px;
+        }
+        .fleet-img-wrap {
+          width: 100%;
+          height: 180px;
+          flex-shrink: 0;
+        }
+        .fleet-body {
+          padding: 18px 18px 20px;
+        }
+        .fleet-body h3 { font-size: 20px; margin-bottom: 6px; }
+        .fleet-body p { font-size: 13.5px; line-height: 1.55; margin-bottom: 12px; }
+        .fleet-body a { font-size: 13px; font-weight: 700; }
+
+        /* Tours Section */
+        .tours-section { padding: 50px 0 65px; }
+        .tours-deck {
+          grid-template-columns: 1fr;
+          gap: 22px;
+          margin-top: 30px;
+        }
+        .tour-monument-card {
+          border-top-left-radius: 36px;
+          border-top-right-radius: 36px;
+        }
+        .tour-arch-visual {
+          height: 190px;
+          border-top-left-radius: 36px;
+          border-top-right-radius: 36px;
+        }
+        .tour-monument-body { padding: 18px 16px; }
+        .tour-monument-body h3 { font-size: 21px; }
+        .tour-monument-body p { font-size: 13.5px; line-height: 1.5; margin-bottom: 14px; }
+        .tour-monument-foot {
+          flex-direction: column;
+          align-items: stretch;
+          gap: 12px;
+        }
+        .tour-monument-foot .tour-price-stack {
+          display: flex;
+          justify-content: space-between;
+          align-items: baseline;
+        }
+        .tour-monument-foot .btn-royal {
+          width: 100%;
+          justify-content: center;
+          padding: 12px 18px;
+          font-size: 13.5px;
+        }
+
+        /* Calculator */
+        .calculator-section { padding: 50px 0; }
+        .calculator-card {
+          padding: 22px 16px;
+          border-radius: 14px;
+          gap: 28px;
+        }
+        .calc-step-title { font-size: 12px; margin-bottom: 8px; }
+        .calc-btn-group {
+          flex-direction: column;
+          gap: 7px;
+          margin-bottom: 16px;
+        }
+        .calc-pill {
+          width: 100%;
+          text-align: left;
+          padding: 11px 14px;
+          font-size: 13px;
+        }
+        .calc-summary-panel { padding: 22px 16px; border-radius: 12px; }
+        .calc-price-display { font-size: 34px; margin: 6px 0; }
+        .calc-inclusions-list { font-size: 12px; margin: 14px 0 18px; }
+
+        /* Atelier Section */
+        .atelier-section { padding: 55px 0; }
+        .atelier-grid { gap: 30px; }
+        .atelier-frame {
+          border-top-left-radius: 40px;
+          border-top-right-radius: 40px;
+        }
+        .atelier-frame img { height: 230px; }
+        .atelier-copy h2 { font-size: 2.2rem; }
+        .atelier-copy p { font-size: 14.5px; line-height: 1.6; }
+        .craft-gem-row { gap: 7px; }
+        .craft-gem-tag { font-size: 11px; padding: 5px 9px; }
+
+        /* 100% Seal */
+        .seal-banner {
+          flex-direction: column;
+          text-align: center;
+          padding: 26px 18px;
+          gap: 16px;
+          margin: 40px auto;
+        }
+        .seal-icon-box { margin: 0 auto; width: 62px; height: 62px; }
+        .seal-copy h3 { font-size: 21px; }
+        .seal-copy p { font-size: 13.5px; }
+
+        /* FAQs */
+        .faq-block { margin: 24px auto 55px; }
+        .faq-card summary {
+          padding: 16px 18px;
+          font-size: 16px;
+          line-height: 1.35;
+          gap: 10px;
+        }
+        .faq-card summary span { font-size: 20px; }
+        .faq-answer {
+          padding: 0 18px 16px;
+          font-size: 13.5px;
+          line-height: 1.55;
+        }
+
+        /* Footer */
+        .site-footer { padding: 50px 0 20px; }
+        .footer-cols {
+          grid-template-columns: 1fr;
+          gap: 28px;
+          padding-bottom: 30px;
+        }
+        .footer-base {
+          flex-direction: column;
+          text-align: center;
+          gap: 8px;
+          font-size: 11.5px;
+        }
+      }
+
+      @media (max-width: 420px) {
+        .fleet-card { flex-direction: column; align-items: stretch; }
+        .fleet-img-wrap { width: 100%; height: 160px; }
+        .sticky-bar-grid { grid-template-columns: 1fr 1.2fr; gap: 8px; }
+        .btn-mobile-call, .btn-mobile-wa { font-size: 12.5px; padding: 10px 8px; }
       }
     </style>
   </head>
@@ -973,7 +1350,7 @@
         <div class="radar-live-indicator">
           <span class="pulse-dot"></span>
           <span>LIVE FROM AGRA:</span>
-          <span style="color: var(--slate-imperial); font-weight: 700;">Taj Mahal is Open Today &bull; Best Sunrise Entry: 05:40 AM</span>
+          <span style="color: var(--slate-imperial); font-weight: 700;">Taj Mahal Open Today &bull; Best Sunrise Entry: 05:40 AM</span>
         </div>
         <div>
           <span style="color: var(--gold-burnished); font-weight: 600;">Notice: Closed every Friday for general visitors</span>
@@ -981,14 +1358,24 @@
       </div>
     </div>
 
-    <!-- Main Navigation Header -->
+    <!-- Main Navigation Header with Mughal Arch Vector Logo -->
     <header class="site-header">
       <div class="container header-shell">
         <a href="/" class="brand-box" aria-label="TajMahal.City Home">
-          <div class="brand-arch-seal">TM</div>
+          <!-- Handcrafted Mughal Arch & Taj Dome Silhouette Vector Logo -->
+          <div class="brand-logo-arch">
+            <svg width="44" height="46" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M24 3C15 3 8 10 8 19V43C8 44.1 8.9 45 10 45H38C39.1 45 40 44.1 40 43V19C40 10 33 3 24 3Z" fill="#1b382b" stroke="#b8860b" stroke-width="1.5"/>
+              <path d="M12 43V22C12 16 18 10 24 7C30 10 36 16 36 22V43" stroke="#e0be62" stroke-width="1.2"/>
+              <path d="M24 13V15.5M24 15.5C21.5 15.5 18 19 18 24C18 27 21 28.5 21 31V41H27V31C27 28.5 30 27 30 24C30 19 26.5 15.5 24 15.5Z" fill="#ffffff" stroke="#b8860b" stroke-width="0.8"/>
+              <rect x="14.5" y="25" width="1.5" height="16" fill="#e0be62" rx="0.5"/>
+              <rect x="32" y="25" width="1.5" height="16" fill="#e0be62" rx="0.5"/>
+              <circle cx="24" cy="11.5" r="1.2" fill="#e0be62"/>
+            </svg>
+          </div>
           <div class="brand-name-wrap">
-            <strong>TajMahal.City</strong>
-            <small>THE CITY OF THE TAJ MAHAL &bull; AGRA</small>
+            <span class="brand-title">TajMahal<span style="color: var(--gold-burnished);">.city</span></span>
+            <span class="brand-tagline">AGRA &bull; LUXURY HERITAGE TOURS</span>
           </div>
         </a>
 
@@ -1002,8 +1389,62 @@
             WhatsApp Local Guide
           </a>
         </nav>
+
+        <!-- Mobile Header Quick Call & Menu Toggle -->
+        <div class="header-mobile-actions">
+          <a href="tel:+919873801605" class="header-call-btn" aria-label="Call TajMahal.City Guide">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          </a>
+          <button class="mobile-nav-toggle" id="mobileNavToggle" aria-label="Open Navigation Menu" onclick="toggleMobileNav()">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
       </div>
     </header>
+
+    <!-- Mobile Navigation Drawer Overlay -->
+    <div class="mobile-nav-backdrop" id="mobileNavBackdrop" onclick="toggleMobileNav()"></div>
+    <div class="mobile-nav-drawer" id="mobileNavDrawer" aria-hidden="true">
+      <div class="drawer-header">
+        <a href="/" class="brand-box" onclick="toggleMobileNav()">
+          <div class="brand-logo-arch" style="width: 34px; height: 36px;">
+            <svg width="34" height="36" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M24 3C15 3 8 10 8 19V43C8 44.1 8.9 45 10 45H38C39.1 45 40 44.1 40 43V19C40 10 33 3 24 3Z" fill="#1b382b" stroke="#b8860b" stroke-width="1.5"/>
+              <path d="M12 43V22C12 16 18 10 24 7C30 10 36 16 36 22V43" stroke="#e0be62" stroke-width="1.2"/>
+              <path d="M24 13V15.5M24 15.5C21.5 15.5 18 19 18 24C18 27 21 28.5 21 31V41H27V31C27 28.5 30 27 30 24C30 19 26.5 15.5 24 15.5Z" fill="#ffffff" stroke="#b8860b" stroke-width="0.8"/>
+            </svg>
+          </div>
+          <div class="brand-name-wrap">
+            <span class="brand-title" style="font-size: 19px;">TajMahal<span style="color: var(--gold-burnished);">.city</span></span>
+            <span class="brand-tagline">AGRA &bull; LUXURY HERITAGE</span>
+          </div>
+        </a>
+        <button class="drawer-close-btn" onclick="toggleMobileNav()" aria-label="Close Menu">&times;</button>
+      </div>
+
+      <div class="drawer-links">
+        <a href="#monuments" onclick="toggleMobileNav()">The 5 Agra Monuments <span>&rarr;</span></a>
+        <a href="#tours" onclick="toggleMobileNav()">Curated Private Tours <span>&rarr;</span></a>
+        <a href="#calculator" onclick="toggleMobileNav()">Instant Tour Calculator <span>&rarr;</span></a>
+        <a href="#atelier" onclick="toggleMobileNav()">Parchin Kari Marble Art <span>&rarr;</span></a>
+        <a href="/practical-guide">Agra Visitor Guide 2026 <span>&rarr;</span></a>
+        <a href="/tours/sunrise-taj-mahal">Sunrise Taj Mahal Tour <span>&rarr;</span></a>
+        <a href="/tours/delhi-agra-same-day">Delhi to Agra Same Day <span>&rarr;</span></a>
+        <a href="/agra-tour-guide">Hire Approved Tour Guide <span>&rarr;</span></a>
+        <a href="/about">About TajMahal.City <span>&rarr;</span></a>
+      </div>
+
+      <div class="drawer-footer">
+        <a href="https://wa.me/919873801605?text=Hi!%20I'm%20planning%20a%20visit%20to%20Agra%20via%20TajMahal.City." class="btn-royal" style="width: 100%; justify-content: center; margin-bottom: 10px;" target="_blank" rel="noopener">
+          WhatsApp Guide (+91 9873801605)
+        </a>
+        <a href="tel:+919873801605" class="btn-outline-gold" style="width: 100%; justify-content: center;">
+          Call Local Office Directly
+        </a>
+      </div>
+    </div>
 
     <main>
       <!-- Hero Section: Luminous Sunrise Over White Marble -->
@@ -1049,7 +1490,7 @@
         </div>
       </div>
 
-      <!-- Section: The 5 Crown Jewels of Agra City -->
+      <!-- Section: The 5 Crown Jewels of Agra City (With Unique Realistic Photographs) -->
       <section id="monuments" class="container" style="padding-top: 85px;">
         <div class="section-intro">
           <p class="kicker-subtle">THE AGRA FLEET</p>
@@ -1058,10 +1499,11 @@
         </div>
 
         <div class="fleet-5-grid">
+          <!-- 1. The Taj Mahal -->
           <div class="fleet-card">
             <div class="fleet-img-wrap">
               <span class="fleet-badge">WORLD WONDER</span>
-              <img src="./images/taj-mahal-sunrise.webp" alt="The Taj Mahal in Agra" loading="lazy">
+              <img src="./images/taj-mahal-sunrise.webp" alt="The Taj Mahal in Agra at dawn" loading="lazy">
             </div>
             <div class="fleet-body">
               <h3>The Taj Mahal</h3>
@@ -1070,22 +1512,24 @@
             </div>
           </div>
 
+          <!-- 2. Agra Fort (New Unique Image) -->
           <div class="fleet-card">
             <div class="fleet-img-wrap">
               <span class="fleet-badge">IMPERIAL CITADEL</span>
-              <img src="./images/agra-heritage-tour.webp" alt="Agra Fort Lal Qila" loading="lazy">
+              <img src="./images/agra-fort-royal.jpg" alt="Agra Fort royal red sandstone architecture" loading="lazy">
             </div>
             <div class="fleet-body">
               <h3>Agra Fort</h3>
-              <p>The 94-acre red sandstone stronghold of Akbar, Jahangir, and the Musamman Burj where Shah Jahan spent his final years.</p>
+              <p>The 94-acre red sandstone stronghold of Akbar, Jahangir, and the Musamman Burj overlooking the Yamuna River.</p>
               <a href="#tours">Fort &amp; Taj Combo &rarr;</a>
             </div>
           </div>
 
+          <!-- 3. Fatehpur Sikri (New Unique Image) -->
           <div class="fleet-card">
             <div class="fleet-img-wrap">
               <span class="fleet-badge">CITY OF VICTORY</span>
-              <img src="./images/agra-marble-detail.webp" alt="Fatehpur Sikri" loading="lazy">
+              <img src="./images/fatehpur-sikri-buland.jpg" alt="Fatehpur Sikri 54-meter Buland Darwaza gateway" loading="lazy">
             </div>
             <div class="fleet-body">
               <h3>Fatehpur Sikri</h3>
@@ -1094,10 +1538,11 @@
             </div>
           </div>
 
+          <!-- 4. Itimad-ud-Daulah / Baby Taj (New Unique Image) -->
           <div class="fleet-card">
             <div class="fleet-img-wrap">
               <span class="fleet-badge">THE PRECURSOR</span>
-              <img src="./images/agra-marble-detail.webp" alt="Itimad-ud-Daulah Baby Taj" loading="lazy">
+              <img src="./images/baby-taj-facade.jpg" alt="Itimad-ud-Daulah Baby Taj pure marble facade" loading="lazy">
             </div>
             <div class="fleet-body">
               <h3>Itimad-ud-Daulah</h3>
@@ -1106,10 +1551,11 @@
             </div>
           </div>
 
+          <!-- 5. Mehtab Bagh (New Unique Image) -->
           <div class="fleet-card">
             <div class="fleet-img-wrap">
               <span class="fleet-badge">SUNSET REFLECTION</span>
-              <img src="./images/taj-mahal-sunrise.webp" alt="Mehtab Bagh sunset" loading="lazy">
+              <img src="./images/mehtab-bagh-sunset.jpg" alt="Mehtab Bagh sunset view of Taj Mahal across Yamuna" loading="lazy">
             </div>
             <div class="fleet-body">
               <h3>Mehtab Bagh</h3>
@@ -1120,7 +1566,7 @@
         </div>
       </section>
 
-      <!-- Section: Curated Private Tours with Pishtaq Mughal Arches -->
+      <!-- Section: Curated Private Tours with Pishtaq Mughal Arches (Unique Images) -->
       <section id="tours" class="tours-section">
         <div class="container">
           <div class="section-intro">
@@ -1156,18 +1602,18 @@
                 <div class="tour-monument-foot">
                   <div class="tour-price-stack">
                     <small>PRIVATE TOUR</small>
-                    <strong>&#8377;1,899 <span style="font-size: 13px; font-weight: 400; color: #607069;">/ person</span></strong>
+                    <strong>&#8377;1,899 <span style="font-size: 13px; font-weight: 400; color: #5e6d67;">/ person</span></strong>
                   </div>
                   <a href="https://wa.me/919873801605?text=Hi%2C%20I%E2%80%99m%20interested%20in%20the%20Sunrise%20Taj%20Mahal%20Tour." class="btn-royal" style="padding: 9px 16px; font-size: 13px;" target="_blank" rel="noopener">Book on WhatsApp</a>
                 </div>
               </div>
             </article>
 
-            <!-- Tour 2: Delhi to Agra Same-Day -->
+            <!-- Tour 2: Delhi to Agra Same-Day (With New Luxury Expressway Car Image) -->
             <article class="tour-monument-card">
               <div class="tour-arch-visual">
                 <span class="tour-badge-pill">DELHI &bull; NOIDA &bull; GURGAON</span>
-                <img src="./images/agra-heritage-tour.webp" alt="Delhi to Agra same day tour by car" loading="lazy">
+                <img src="./images/delhi-agra-expressway.jpg" alt="Luxury private car on Yamuna Expressway to Agra" loading="lazy">
               </div>
               <div class="tour-monument-body">
                 <h3>Delhi to Agra Same-Day Trip</h3>
@@ -1189,18 +1635,18 @@
                 <div class="tour-monument-foot">
                   <div class="tour-price-stack">
                     <small>ALL-INCLUSIVE CAR</small>
-                    <strong>&#8377;8,999 <span style="font-size: 13px; font-weight: 400; color: #607069;">/ car ($110)</span></strong>
+                    <strong>&#8377;8,999 <span style="font-size: 13px; font-weight: 400; color: #5e6d67;">/ car ($110)</span></strong>
                   </div>
                   <a href="https://wa.me/919873801605?text=Hi%2C%20I%E2%80%99m%20interested%20in%20the%20Delhi%20to%20Agra%20Same-Day%20Tour." class="btn-royal" style="padding: 9px 16px; font-size: 13px;" target="_blank" rel="noopener">Book on WhatsApp</a>
                 </div>
               </div>
             </article>
 
-            <!-- Tour 3: Full City Heritage -->
+            <!-- Tour 3: Full City Heritage (With Fatehpur Sikri Image) -->
             <article class="tour-monument-card">
               <div class="tour-arch-visual">
                 <span class="tour-badge-pill">FULL CITY IMMERSION</span>
-                <img src="./images/agra-marble-detail.webp" alt="Full day Agra city tour with Fatehpur Sikri" loading="lazy">
+                <img src="./images/fatehpur-sikri-buland.jpg" alt="Full day Agra city tour with Fatehpur Sikri" loading="lazy">
               </div>
               <div class="tour-monument-body">
                 <h3>Grand Agra &amp; Fatehpur Sikri</h3>
@@ -1222,18 +1668,18 @@
                 <div class="tour-monument-foot">
                   <div class="tour-price-stack">
                     <small>FULL DAY GROUP</small>
-                    <strong>&#8377;4,999 <span style="font-size: 13px; font-weight: 400; color: #607069;">/ group</span></strong>
+                    <strong>&#8377;4,999 <span style="font-size: 13px; font-weight: 400; color: #5e6d67;">/ group</span></strong>
                   </div>
                   <a href="https://wa.me/919873801605?text=Hi%2C%20I%E2%80%99m%20interested%20in%20the%20Grand%20Agra%20City%20Tour." class="btn-royal" style="padding: 9px 16px; font-size: 13px;" target="_blank" rel="noopener">Book on WhatsApp</a>
                 </div>
               </div>
             </article>
 
-            <!-- Tour 4: Hire Approved Guide -->
+            <!-- Tour 4: Hire Approved Guide (With Agra Fort Image) -->
             <article class="tour-monument-card">
               <div class="tour-arch-visual">
                 <span class="tour-badge-pill">CERTIFIED HISTORIAN</span>
-                <img src="./images/taj-mahal-sunrise.webp" alt="Govt approved private tour guide Agra" loading="lazy">
+                <img src="./images/agra-fort-royal.jpg" alt="Govt approved private tour guide Agra" loading="lazy">
               </div>
               <div class="tour-monument-body">
                 <h3>Private Govt-Approved Guide</h3>
@@ -1255,7 +1701,7 @@
                 <div class="tour-monument-foot">
                   <div class="tour-price-stack">
                     <small>HALF / FULL DAY</small>
-                    <strong>&#8377;1,500 <span style="font-size: 13px; font-weight: 400; color: #607069;">($20 USD)</span></strong>
+                    <strong>&#8377;1,500 <span style="font-size: 13px; font-weight: 400; color: #5e6d67;">($20 USD)</span></strong>
                   </div>
                   <a href="https://wa.me/919873801605?text=Hi!%20I%20want%20to%20hire%20a%20Private%20Tour%20Guide%20in%20Agra." class="btn-royal" style="padding: 9px 16px; font-size: 13px;" target="_blank" rel="noopener">Book on WhatsApp</a>
                 </div>
@@ -1416,10 +1862,16 @@
       <div class="container footer-cols">
         <div>
           <a href="/" class="brand-box" style="margin-bottom: 16px;">
-            <div class="brand-arch-seal">TM</div>
+            <div class="brand-logo-arch" style="width: 36px; height: 38px;">
+              <svg width="36" height="38" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M24 3C15 3 8 10 8 19V43C8 44.1 8.9 45 10 45H38C39.1 45 40 44.1 40 43V19C40 10 33 3 24 3Z" fill="#1b382b" stroke="#b8860b" stroke-width="1.5"/>
+                <path d="M12 43V22C12 16 18 10 24 7C30 10 36 16 36 22V43" stroke="#e0be62" stroke-width="1.2"/>
+                <path d="M24 13V15.5M24 15.5C21.5 15.5 18 19 18 24C18 27 21 28.5 21 31V41H27V31C27 28.5 30 27 30 24C30 19 26.5 15.5 24 15.5Z" fill="#ffffff" stroke="#b8860b" stroke-width="0.8"/>
+              </svg>
+            </div>
             <div class="brand-name-wrap">
-              <strong>TajMahal.City</strong>
-              <small>THE CITY OF THE TAJ MAHAL &bull; AGRA</small>
+              <span class="brand-title" style="font-size: 20px;">TajMahal<span style="color: var(--gold-burnished);">.city</span></span>
+              <span class="brand-tagline">AGRA &bull; LUXURY HERITAGE TOURS</span>
             </div>
           </a>
           <p style="color: var(--text-muted); font-size: 14.5px; line-height: 1.6; max-width: 320px;">
@@ -1473,15 +1925,37 @@
       </div>
     </footer>
 
-    <!-- Mobile Sticky WhatsApp Bar -->
+    <!-- Mobile Sticky Dual-Action Bar (Call + WhatsApp) -->
     <div class="mobile-sticky-bar">
-      <a href="https://wa.me/919873801605?text=Hi!%20I'm%20planning%20a%20visit%20to%20Agra%20via%20TajMahal.City.%20Can%20you%20help%20me%20with%20tours%20and%20prices%3F" class="btn-royal" target="_blank" rel="noopener">
-        Chat with Local Agra Expert on WhatsApp
-      </a>
+      <div class="sticky-bar-grid">
+        <a href="tel:+919873801605" class="btn-mobile-call">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          Call Direct
+        </a>
+        <a href="https://wa.me/919873801605?text=Hi!%20I'm%20planning%20a%20visit%20to%20Agra%20via%20TajMahal.City.%20Can%20you%20help%20me%20with%20tours%20and%20prices%3F" class="btn-mobile-wa" target="_blank" rel="noopener">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12.031 2C6.495 2 2 6.495 2 12.031c0 1.954.557 3.782 1.523 5.336L2 22l4.808-1.488A9.99 9.99 0 0012.031 22c5.536 0 10.031-4.495 10.031-10.031C22.062 6.495 17.567 2 12.031 2zm5.727 14.195c-.241.677-1.396 1.298-1.928 1.378-.49.074-1.12.106-3.606-.922-2.91-1.205-4.783-4.184-4.928-4.378-.146-.193-1.178-1.571-1.178-2.997 0-1.425.748-2.128 1.014-2.42.266-.291.58-.364.773-.364.193 0 .386.002.555.011.179.01.417-.068.653.498.241.58.82 2.002.893 2.148.073.146.12.316.024.51-.097.193-.146.314-.29.485-.145.17-.306.38-.437.51-.146.146-.298.305-.129.596.17.291.753 1.242 1.616 2.012 1.11 0.99 2.046 1.297 2.337 1.442.29.146.46.122.63-.073.17-.194.726-.847.92-1.139.193-.29.387-.242.653-.145.266.097 1.691.798 1.981.943.29.146.484.218.556.34.073.121.073.702-.168 1.379z"/></svg>
+          WhatsApp Instant
+        </a>
+      </div>
     </div>
 
-    <!-- Interactive Tour Calculator Script -->
+    <!-- Interactive Tour Calculator & Navigation Script -->
     <script>
+      function toggleMobileNav() {
+        const drawer = document.getElementById('mobileNavDrawer');
+        const backdrop = document.getElementById('mobileNavBackdrop');
+        const isOpen = drawer.classList.contains('open');
+        if (isOpen) {
+          drawer.classList.remove('open');
+          backdrop.classList.remove('open');
+          document.body.style.overflow = '';
+        } else {
+          drawer.classList.add('open');
+          backdrop.classList.add('open');
+          document.body.style.overflow = 'hidden';
+        }
+      }
+
       let curOrigin = "Delhi / NCR";
       let basePrice = 8999;
       let curStyle = "Sunrise Dawn Tour";
