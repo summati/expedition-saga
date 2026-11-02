@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 Disallow: /api/
-Sitemap: https://expeditionsaga.pages.dev/sitemap.xml
+Sitemap: https://tajmahal.city/sitemap.xml
