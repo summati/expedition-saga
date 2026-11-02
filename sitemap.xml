@@ -2,62 +2,56 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://tajmahal.city/</loc>
-    <priority>1.0</priority>
+    <lastmod>2026-11-03</lastmod>
     <changefreq>daily</changefreq>
+    <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://tajmahal.city/tours/sunrise-taj-mahal</loc>
+    <loc>https://tajmahal.city/practical-guide/</loc>
+    <lastmod>2026-11-03</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.9</priority>
-    <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>https://tajmahal.city/tours/delhi-agra-same-day</loc>
+    <loc>https://tajmahal.city/tours/sunrise-taj-mahal/</loc>
+    <lastmod>2026-11-03</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.9</priority>
-    <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>https://tajmahal.city/tours/family-senior-friendly</loc>
-    <priority>0.8</priority>
+    <loc>https://tajmahal.city/tours/delhi-agra-same-day/</loc>
+    <lastmod>2026-11-03</lastmod>
     <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://tajmahal.city/tours/agra-beyond-taj</loc>
-    <priority>0.8</priority>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://tajmahal.city/taj-mahal-tour-from-delhi</loc>
     <priority>0.9</priority>
-    <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>https://tajmahal.city/taj-mahal-tour-from-agra</loc>
+    <loc>https://tajmahal.city/agra-tour-guide/</loc>
+    <lastmod>2026-11-03</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.9</priority>
-    <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>https://tajmahal.city/agra-tour-guide</loc>
-    <priority>0.9</priority>
+    <loc>https://tajmahal.city/taj-mahal-tour-from-delhi/</loc>
+    <lastmod>2026-11-03</lastmod>
     <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://tajmahal.city/agra-day-trip</loc>
-    <priority>0.8</priority>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://tajmahal.city/practical-guide</loc>
     <priority>0.85</priority>
-    <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://tajmahal.city/about</loc>
+    <loc>https://tajmahal.city/taj-mahal-tour-from-agra/</loc>
+    <lastmod>2026-11-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://tajmahal.city/about/</loc>
+    <lastmod>2026-11-03</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-    <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://tajmahal.city/contact</loc>
-    <priority>0.8</priority>
+    <loc>https://tajmahal.city/contact/</loc>
+    <lastmod>2026-11-03</lastmod>
     <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
 </urlset>
