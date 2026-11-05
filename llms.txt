@@ -1,0 +1,10 @@
+# TajMahal.City
+> The digital authority and private luxury tour concierge for Agra and the Taj Mahal.
+
+- [Home](https://tajmahal.city/): Overview of private Taj Mahal dawn tours, certified historian guides, and zero forced shopping trips.
+- [Sunrise Tour](https://tajmahal.city/tours/sunrise-taj-mahal/): Private sunrise tours with first-in-gate entry and crowd-free photography.
+- [Delhi to Agra](https://tajmahal.city/tours/delhi-agra-same-day/): Same-day door-to-door private AC excursions via Yamuna Expressway.
+- [Photography Guide](https://tajmahal.city/best-taj-mahal-sunrise-photography-spots/): Top 10 sunrise photography spots, mirror reflection angles, and ASI camera rules.
+- [Same Day Guide](https://tajmahal.city/delhi-to-agra-same-day-tour-guide/): Car vs Gatimaan Express comparison, costs, and itinerary.
+- [Approved Guides](https://tajmahal.city/agra-tour-guide/): Hiring licensed government-approved tour guides in Agra.
+- [Visitor Guide 2026](https://tajmahal.city/practical-guide/): Monument ticket pricing, timings, Friday closures, and scam warnings.
